@@ -6,10 +6,13 @@
 var searchInsert = function(nums, target) {
     if(nums[0] > target) return 0;
     for(let i = 0; i < nums.length; i++){
-        if (nums[i] == target  ){
-            return i
-        }else if(i < nums.length - 1 && nums[i+1] > target && nums[i] < target){
-            return i+1
+        // if (nums[i] == target  ){
+        //     return i
+        // }else if(i < nums.length - 1 && nums[i+1] > target && nums[i] < target){
+        //     return i+1
+        // }
+           if (nums[i] >= target) {
+            return i;
         }
     }
         return nums.length
